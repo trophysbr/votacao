@@ -33,10 +33,10 @@ export default function Signup() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-darkBackground py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-primary">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-whiteText">
             Criar Conta
           </h2>
         </div>
@@ -52,7 +52,7 @@ export default function Signup() {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-secondaryText placeholder-secondaryText text-whiteText bg-darkBackground rounded-t-md focus:outline-none focus:ring-highlightBlue focus:border-highlightBlue focus:z-10 sm:text-sm"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -68,7 +68,7 @@ export default function Signup() {
                 type="password"
                 autoComplete="new-password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-primary focus:border-primary focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-secondaryText placeholder-secondaryText text-whiteText bg-darkBackground rounded-b-md focus:outline-none focus:ring-highlightBlue focus:border-highlightBlue focus:z-10 sm:text-sm"
                 placeholder="Senha"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -77,23 +77,23 @@ export default function Signup() {
           </div>
 
           {error && (
-            <div className="text-red-500 text-sm text-center">{error}</div>
+            <div className="text-errorRed text-sm text-center">{error}</div>
           )}
 
           <div>
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-whiteText bg-primaryPink hover:bg-hoverPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryPink"
             >
               {loading ? 'Criando conta...' : 'Criar Conta'}
             </button>
           </div>
         </form>
 
-        <div className="text-center text-sm text-gray-600">
+        <div className="text-center text-sm text-secondaryText">
           Já tem uma conta?{' '}
-          <Link href="/auth/login" className="font-medium text-primary hover:text-primary/80">
+          <Link href="/auth/login" className="font-medium text-highlightBlue hover:text-highlightBlue/80">
             Entrar
           </Link>
         </div>
