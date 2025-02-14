@@ -5,9 +5,15 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#D4AF37',
-        secondary: '#228B22',
+      colors: { 
+        darkBackground: '#121212',
+        whiteText: '#FFFFFF',
+        primaryPink: '#FF4081',
+        hoverPink: '#FF80AB',
+        secondaryText: '#B0BEC5',
+        highlightBlue: '#00E5FF',
+        focusGreen: '#00C853',
+        errorRed: '#D32F2F',
       },
     },
   },
