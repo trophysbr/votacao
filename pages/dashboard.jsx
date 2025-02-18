@@ -33,8 +33,9 @@ export default function Dashboard() {
           </button>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-darkBackground p-6 rounded-lg shadow">
+        {/* Seção de Votação */}
+        <div className="flex flex-col items-center w-full">
+          <div className="bg-darkBackground p-6 rounded-lg shadow w-full max-w-2xl mb-8">
             <h2 className="text-xl font-semibold text-whiteText mb-4">Votação Atual</h2>
             <a
               href="/vote"
@@ -43,8 +44,14 @@ export default function Dashboard() {
               Votar Agora
             </a>
           </div>
+        </div>
 
-          <TopPlayersGrid />
+        {/* Ranking Semanal */}
+        <div className="w-full max-w-2xl mx-auto bg-darkBackground p-6 rounded-lg shadow">
+          <h2 className="text-xl font-semibold text-whiteText mb-4">Ranking Semanal</h2>
+          <div className="flex flex-col gap-4">
+            <TopPlayersGrid />
+          </div>
         </div>
       </div>
     </div>
