@@ -43,7 +43,9 @@ export default function TopPlayersGrid() {
 
         if (error) throw error
 
-        setPlayers(data)
+        // Ordena os jogadores pelo total de pontos de forma decrescente
+        const sortedPlayers = data.sort((a, b) => b.total_points - a.total_points)
+        setPlayers(sortedPlayers)
       } catch (error) {
         toast.error('Erro ao carregar jogadores: ' + error.message)
       } finally {
