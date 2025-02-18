@@ -1,1 +1,12 @@
+<<<<<<< HEAD
 {"/_error":"pages/_error.js","/auth/signup":"pages/auth/signup.html","/auth/logout":"pages/auth/logout.html","/_app":"pages/_app.js","/dashboard":"pages/dashboard.html","/auth/login":"pages/auth/login.html","/":"pages/index.html","/vote":"pages/vote.html","/_document":"pages/_document.js","/404":"pages/404.html"}
+=======
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/dashboardGamer": "pages/dashboardGamer.js",
+  "/": "pages/index.js",
+  "/auth/login": "pages/auth/login.js"
+}
+>>>>>>> f0848abbaf9e4e4c32f67cbe86c40b6d938bae59

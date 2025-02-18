@@ -11,10 +11,16 @@
   "rootMainFiles": [],
   "pages": {
     "/": [
+<<<<<<< HEAD
       "static/chunks/webpack-0bb326fdbbcc66fe.js",
       "static/chunks/framework-fae63b21a27d6472.js",
       "static/chunks/main-eaeda76b22a29db9.js",
       "static/chunks/pages/index-3583790b19614eea.js"
+=======
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/index.js"
+>>>>>>> f0848abbaf9e4e4c32f67cbe86c40b6d938bae59
     ],
     "/_app": [
       "static/chunks/webpack-0bb326fdbbcc66fe.js",
@@ -44,6 +50,7 @@
       "static/chunks/main-eaeda76b22a29db9.js",
       "static/chunks/pages/auth/logout-f51eedcb5caf8938.js"
     ],
+<<<<<<< HEAD
     "/auth/signup": [
       "static/chunks/webpack-0bb326fdbbcc66fe.js",
       "static/chunks/framework-fae63b21a27d6472.js",
@@ -63,6 +70,12 @@
       "static/chunks/main-eaeda76b22a29db9.js",
       "static/chunks/1bfc9850-de5654967509ca5f.js",
       "static/chunks/pages/vote-4ea9ef63bfec14d7.js"
+=======
+    "/dashboardGamer": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/dashboardGamer.js"
+>>>>>>> f0848abbaf9e4e4c32f67cbe86c40b6d938bae59
     ]
   },
   "ampFirstPages": []

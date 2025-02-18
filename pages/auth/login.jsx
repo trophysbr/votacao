@@ -26,7 +26,7 @@ export default function Login() {
     if (error) {
       setError(error.message)
     } else {
-      router.push('/dashboard')
+      router.push('/dashboardGamer')
     }
     setLoading(false)
   }
@@ -35,7 +35,7 @@ export default function Login() {
     const { error } = await supabase.auth.signInWithOAuth({
       provider,
       options: {
-        redirectTo: `${window.location.origin}/dashboard`,
+        redirectTo: `${window.location.origin}/dashboardGamer`,
       },
     })
 
@@ -45,11 +45,11 @@ export default function Login() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-darkBackground py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-whiteText">
-            Entrar na Votação
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-white ">
+            TROPHYS
           </h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleLogin}>
@@ -64,7 +64,7 @@ export default function Login() {
                 type="email"
                 autoComplete="email"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-primaryPink placeholder-secondaryText text-darkBackground focus:outline-none focus:ring-primaryPink focus:border-primaryPink focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-purple-500 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm"
                 placeholder="Email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -80,7 +80,7 @@ export default function Login() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-primaryPink placeholder-secondaryText text-darkBackground focus:outline-none focus:ring-primaryPink focus:border-primaryPink focus:z-10 sm:text-sm"
+                className="appearance-none rounded-none relative block w-full px-3 py-2 border border-purple-500 placeholder-gray-400 text-gray-900 focus:outline-none focus:ring-purple-500 focus:border-purple-500 focus:z-10 sm:text-sm"
                 placeholder="Senha"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -89,14 +89,14 @@ export default function Login() {
           </div>
 
           {error && (
-            <div className="text-errorRed text-sm text-center">{error}</div>
+            <div className="text-red-500 text-sm text-center">{error}</div>
           )}
 
           <div>
             <button
               type="submit"
               disabled={loading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-primaryPink hover:bg-hoverPink focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primaryPink"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
             >
               {loading ? 'Entrando...' : 'Entrar'}
             </button>
@@ -106,10 +106,10 @@ export default function Login() {
         <div className="mt-6">
           <div className="relative">
             <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-primaryPink" />
+              <div className="w-full border-t border-purple-500" />
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-2 bg-darkBackground text-secondaryText">
+              <span className="px-2 bg-gray-900 text-gray-400">
                 Ou continue com
               </span>
             </div>
@@ -118,14 +118,14 @@ export default function Login() {
           <div className="mt-6 grid grid-cols-2 gap-3">
             <button
               onClick={() => handleOAuthLogin('google')}
-              className="w-full inline-flex justify-center py-2 px-4 border border-primaryPink rounded-md shadow-sm bg-darkGray text-sm font-medium text-secondaryText hover:bg-darkGray/80"
+              className="w-full inline-flex justify-center py-2 px-4 border border-purple-500 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-400 hover:bg-gray-700"
             >
               <FcGoogle className="h-5 w-5" />
               <span className="ml-2">Google</span>
             </button>
             <button
               onClick={() => handleOAuthLogin('apple')}
-              className="w-full inline-flex justify-center py-2 px-4 border border-primaryPink rounded-md shadow-sm bg-darkGray text-sm font-medium text-secondaryText hover:bg-darkGray/80"
+              className="w-full inline-flex justify-center py-2 px-4 border border-purple-500 rounded-md shadow-sm bg-gray-800 text-sm font-medium text-gray-400 hover:bg-gray-700"
             >
               <BsApple className="h-5 w-5" />
               <span className="ml-2">Apple</span>
@@ -133,9 +133,9 @@ export default function Login() {
           </div>
         </div>
 
-        <div className="text-center text-sm text-secondaryText">
+        <div className="text-center text-sm text-gray-400">
           Não tem uma conta?{' '}
-          <Link href="/auth/signup" className="font-medium text-primaryPink hover:text-hoverPink">
+          <Link href="/auth/signup" className="font-medium text-purple-500 hover:text-purple-600">
             Cadastre-se
           </Link>
         </div>
